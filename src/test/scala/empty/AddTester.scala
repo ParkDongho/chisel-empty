@@ -12,8 +12,7 @@ import chiseltest._
 import org.scalatest.flatspec.AnyFlatSpec
 
 class AddTester extends AnyFlatSpec with ChiselScalatestTester {
-
-  "Add" should "work" in {
+  "Add" should "pass" in {
     test(new Add) { dut =>
       for (a <- 0 to 2) {
         for (b <- 0 to 3) {
