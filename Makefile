@@ -11,7 +11,7 @@ wave:
 	open ./test_run_dir/Add_should_pass/*.vcd
 
 clean:
-	git clean -fd
+	rm -rf generated
 
 diagram:
 	cd ~/Library/diagrammer && ./diagram.sh -i ${CURR_DIR}/generated/*.fir
