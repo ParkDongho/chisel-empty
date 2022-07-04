@@ -13,6 +13,7 @@ wave:
 clean:
 	rm -rf generated
 	rm -rf project
+	rm -rf target
 
 diagram:
 	cd ~/Library/diagrammer && ./diagram.sh -i ${CURR_DIR}/generated/*.fir
