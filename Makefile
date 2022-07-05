@@ -16,7 +16,7 @@ clean:
 	rm -rf target
 
 diagram:
-	cd ~/Library/diagrammer && ./diagram.sh -i ${CURR_DIR}/generated/*.fir
+	source ./change_java_version.sh && cd ~/Library/diagrammer && ./diagram.sh -i ${CURR_DIR}/generated/*.fir
 	cd -
 
 help:
