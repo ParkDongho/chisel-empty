@@ -15,7 +15,7 @@ REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.s
 
 #######################
 # Generate Verilog Code
-FifoMem:
+Add:
 	$(SBT) "runMain empty.AddMain" \
 		&& scp -P ${REMOTE_PORT} ./generated/FifoMem.v \
 		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
