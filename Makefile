@@ -16,14 +16,14 @@ REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.s
 #######################
 # Generate Verilog Code
 FifoMem:
-	$(SBT) "runMain fifo.FifoMemMain" \
+	$(SBT) "runMain empty.AddMain" \
 		&& scp -P ${REMOTE_PORT} ./generated/FifoMem.v \
 		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
 
 ##############
 # Run the test
 MemFifo_Test:
-	$(SBT) "testOnly BubbleFifoTest"
+	$(SBT) "testOnly AddTest"
 
 ##################################
 # Draw Timing Diagram with GTKWave
@@ -33,7 +33,7 @@ MemFifo_Wave:
 ####################
 # Draw Block Diagram
 MemFifo_Diagrammer:
-	$(SOURCE) ./util/draw_diagrammer.sh -f "MemFifo"
+	$(SOURCE) ./util/draw_diagrammer.sh -f "AddFifo"
 
 clean:
 	rm -rf generated
