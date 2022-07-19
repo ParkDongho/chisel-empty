@@ -1,31 +1,46 @@
+SBT = sbt
+SOURCE = source
+OPEN = open
+
 CURR_DIR:=$(shell pwd)
-# Generate Verilog code
-doit:
-	sbt run
 
+SSH_FILE := ~/dev/chisel/setup/ssh.txt 
+PORT_FILE := ~/dev/chisel/setup/port.txt
+REMOTE_SSH := $(shell cat ${SSH_FILE})
+REMOTE_PORT := $(shell cat ${PORT_FILE})
+
+# 서버상의 Vivado 프로젝트의 verilog 파일이 저장되는 디렉토리를 설정
+REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.srcs/sources_1/new
+
+
+#######################
+# Generate Verilog Code
+FifoMem:
+	$(SBT) "runMain fifo.FifoMemMain" \
+		&& scp -P ${REMOTE_PORT} ./generated/FifoMem.v \
+		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
+
+##############
 # Run the test
-test:
-	sbt test
+MemFifo_Test:
+	$(SBT) "testOnly BubbleFifoTest"
 
-wave:
-	open ./test_run_dir/Add_should_pass/*.vcd
+##################################
+# Draw Timing Diagram with GTKWave
+MemFifo_Wave:
+	$(OPEN) ./test_run_dir/Add_should_pass/*.vcd
+
+####################
+# Draw Block Diagram
+MemFifo_Diagrammer:
+	$(SOURCE) ./util/draw_diagrammer.sh -f "MemFifo"
 
 clean:
 	rm -rf generated
 	rm -rf project
 	rm -rf target
 
-diagram:
-	source ./change_java_version.sh && cd ~/Library/diagrammer && ./diagram.sh -i ${CURR_DIR}/generated/*.fir
-	cd -
-
 help:
+	echo "사용방법"
 	echo ""
-	echo ""
-	echo " 사용 방법:"
-	echo ""
-	echo "	make 실행명령"
-	echo ""
-	echo " 실행 명령:"
-	echo ""
-	echo ""
+
