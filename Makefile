@@ -16,24 +16,24 @@ REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.s
 #######################
 # Generate Verilog Code
 Add:
-	$(SBT) "runMain empty.AddMain" \
-		&& scp -P ${REMOTE_PORT} ./generated/FifoMem.v \
-		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
+	$(SBT) "runMain empty.AddMain" \ #chisel -> verilog 컴파일
+		&& scp -P ${REMOTE_PORT} ./generated/Add.v \   #Add.v라는 이름의
+		${REMOTE_SSH}:${REMOTE_PROJ_DIR}               #베릴로그 파일을 서버에 전송
 
 ##############
 # Run the test
-MemFifo_Test:
+Add_Test:
 	$(SBT) "testOnly AddTest"
 
 ##################################
 # Draw Timing Diagram with GTKWave
-MemFifo_Wave:
+Add_Wave:
 	$(OPEN) ./test_run_dir/Add_should_pass/*.vcd
 
 ####################
 # Draw Block Diagram
-MemFifo_Diagrammer:
-	$(SOURCE) ./util/draw_diagrammer.sh -f "AddFifo"
+Add_Diagrammer:
+	$(SOURCE) ./util/draw_diagrammer.sh -f "Add"
 
 clean:
 	rm -rf generated
@@ -43,4 +43,3 @@ clean:
 help:
 	echo "사용방법"
 	echo ""
-
