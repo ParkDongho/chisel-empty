@@ -1,0 +1,11 @@
+[info] Updated file /Users/parkdongho/Documents/dev/chisel/chisel-empty/project/build.properties: set sbt.version to 1.6.2
+[info] welcome to sbt 1.6.2 (Homebrew Java 18.0.1.1)
+[info] loading project definition from /Users/parkdongho/Documents/dev/chisel/chisel-empty/project
+[info] loading settings for project chisel-empty from build.sbt ...
+[info] set current project to chisel-empty (in build file:/Users/parkdongho/Documents/dev/chisel/chisel-empty/)
+[info] compiling 1 Scala source to /Users/parkdongho/Documents/dev/chisel/chisel-empty/target/scala-2.12/classes ...
+
+[warn] Canceling execution...
+[info] Compilation has been cancelled
+[error] Cancelled: runMain empty.AddMain
+[error] Use 'last' for the full log.

@@ -10,15 +10,16 @@ REMOTE_SSH := $(shell cat ${SSH_FILE})
 REMOTE_PORT := $(shell cat ${PORT_FILE})
 
 # 서버상의 Vivado 프로젝트의 verilog 파일이 저장되는 디렉토리를 설정
-REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.srcs/sources_1/new
+REMOTE_PROJ_DIR := ~/Documents/dev/chisel-empty/chisel-empty.srcs/sources_1/new
 
 
 #######################
 # Generate Verilog Code
 Add:
-	$(SBT) "runMain empty.AddMain" \ #chisel -> verilog 컴파일
-		&& scp -P ${REMOTE_PORT} ./generated/Add.v \   #Add.v라는 이름의
-		${REMOTE_SSH}:${REMOTE_PROJ_DIR}               #베릴로그 파일을 서버에 전송
+	make clean \
+		&& $(SBT) "runMain empty.AddMain" \
+		&& scp -P ${REMOTE_PORT} ./generated/*.v \
+		${REMOTE_SSH}:${REMOTE_PROJ_DIR} 
 
 ##############
 # Run the test

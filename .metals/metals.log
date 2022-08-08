@@ -1,0 +1,29 @@
+2022.07.26 11:49:41 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/parkdongho/Documents/dev/chisel/chisel-empty/.metals/lsp.trace.json or /Users/parkdongho/Library/Caches/org.scalameta.metals/lsp.trace.json[0m
+2022.07.26 11:49:45 INFO  logging to file /Users/parkdongho/Documents/dev/chisel/chisel-empty/.metals/metals.log[0m
+2022.07.26 11:49:45 INFO  Started: Metals version 0.11.2 in workspace '/Users/parkdongho/Documents/dev/chisel/chisel-empty' for client coc.nvim 0.0.81.[0m
+2022.07.26 11:49:47 INFO  Parse release: 1.8.0_333[0m
+2022.07.26 11:49:56 INFO  time: initialize in 10s[0m
+2022.07.26 11:50:01 WARN  Build server is not auto-connectable.[0m
+2022.07.26 11:55:13 INFO  running '/Library/Java/JavaVirtualMachines/jdk1.8.0_333.jdk/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -Dsbt.version=1.6.2 -jar /var/folders/vt/tdrl7g5930s3_k5ckpd446r40000gn/T/metals3300973462223852179/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2022.07.26 11:55:19 INFO  [info] Updated file /Users/parkdongho/Documents/dev/chisel/chisel-empty/project/build.properties: set sbt.version to 1.6.2[0m
+2022.07.26 11:55:19 INFO  [info] welcome to sbt 1.6.2 (Oracle Corporation Java 1.8.0_333)[0m
+2022.07.26 11:55:33 INFO  [info] loading settings for project chisel-empty-build-build from metals.sbt ...[0m
+2022.07.26 11:55:36 INFO  [info] loading project definition from /Users/parkdongho/Documents/dev/chisel/chisel-empty/project/project[0m
+2022.07.26 11:55:45 INFO  [info] loading settings for project chisel-empty-build from metals.sbt ...[0m
+2022.07.26 11:55:45 INFO  [info] loading project definition from /Users/parkdongho/Documents/dev/chisel/chisel-empty/project[0m
+2022.07.26 11:55:52 INFO  [success] Generated .bloop/chisel-empty-build.json[0m
+2022.07.26 11:55:52 INFO  [success] Total time: 6 s, completed Jul 26, 2022 11:55:52 AM[0m
+2022.07.26 11:55:59 INFO  [info] loading settings for project chisel-empty from build.sbt ...[0m
+2022.07.26 11:55:59 INFO  [info] set current project to chisel-empty (in build file:/Users/parkdongho/Documents/dev/chisel/chisel-empty/)[0m
+2022.07.26 11:56:01 INFO  [success] Generated .bloop/chisel-empty.json[0m
+2022.07.26 11:56:01 INFO  [success] Generated .bloop/chisel-empty-test.json[0m
+2022.07.26 11:56:01 INFO  [success] Total time: 1 s, completed Jul 26, 2022 11:56:01 AM[0m
+2022.07.26 11:56:01 INFO  time: ran 'sbt bloopInstall' in 48s[0m
+2022.07.26 11:56:01 INFO  Attempting to connect to the build server...[0m
+2022.07.26 11:56:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/parkdongho/Documents/dev/chisel/chisel-empty/.metals/bsp.trace.json or /Users/parkdongho/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2022.07.26 11:56:14 INFO  Attempting to connect to the build server...[0m
+2022.07.26 11:56:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/parkdongho/Documents/dev/chisel/chisel-empty/project/.metals/bsp.trace.json or /Users/parkdongho/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2022.07.26 11:56:14 INFO  time: Connected to build server in 12s[0m
+2022.07.26 11:56:14 INFO  Connected to Build server: Bloop v1.4.13[0m
+2022.07.26 11:56:14 INFO  time: Imported build in 0.56s[0m
+2022.07.26 11:56:34 INFO  time: indexed workspace in 20s[0m
